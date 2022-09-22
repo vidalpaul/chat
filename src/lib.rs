@@ -10,6 +10,11 @@ pub struct Config {
     number_nonblank: bool,
 }
 
+pub fn run(config: Config) -> OpsResult<()> {
+    dbg!(config);
+    Ok(())
+}
+
 pub fn get_args() -> OpsResult<Config> {
     let matches = App::new("chat")
         .version("0.1.0")
